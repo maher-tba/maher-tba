@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:title" content="معلومات عن القطط ">
+  <meta property="og:site_name" content="Homework 1">
+  <meta name="viewport">
+  <title>Assignment 2</title>
+  <link rel="icon" type="image/x-icon" href="img/cat.ico">
+  <!-- ===== CSS ===== -->
+  <style>
+    .header {
+      background-color: rgb(255, 255, 255);
+      position: fixed;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      height: 100px;
+    }
+
+    .header-main {
+      padding: 5px;
+      text-align: center;
+      height: 10%;
+      border: 2px solid black;
+    }
+
+    .header-logo {
+      border-radius: 50%;
+      width: 80px;
+      text-align: center;
+      padding: 8px;
+      border: 2px solid black;
+    }
+
+    .topnav {
+      background-color: rgb(255, 255, 255);
+      border: 2px solid black;
+
+      position: fixed;
+      margin-top: 100px;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+    }
+
+    .topnav a {
+      float: right;
+      color: #000;
+      text-align: center;
+      padding: 14px 16px;
+      font-size: 17px;
+      float: left;
+      border: 2px solid black;
+      
+            
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .sidenav {
+      border: 2px solid black;
+      height: 100%;
+      width: 20%;
+      top: 0px;
+      left: 0px;
+      position: fixed;
+      background-color: rgb(255, 255, 255);
+      overflow-x: hidden;
+      margin-top: 155px;
+    }
+
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      display: flex;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    h1 {
+      color: maroon;
+      margin-left: 40px;
+    }
+
+
+    .container {
+      background-color: fff;
+      margin-left: 20%;
+      width: 80%;
+      position: absolute;
+      margin-top: 150px;
+      z-index: -1;
+      top: 0px;
+      left: 0px;
+    }
+    .column {
+      float: left;
+      padding: 10px;
+    }
+
+    .left {
+      width: 40%;
+    }
+
+    .right {
+      width: 40%;
+    }
+
+    .full {
+      width: 82%;
+    }
+
+    .container-grid{
+      flex: 1;
+    padding: 20px;
+    flex-flow: row;
+    gap: 10px;
+
+
+    }
+    .cell {
+    font-size: 2rem;
+    width: 20%;
+    text-align: center;
+    padding: 4rem;
+    background: deepskyblue;
+    float: left;
+    margin: 2%;
+
+}
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .resizedTextbox {width: 300px; }
+
+
+    @media only screen and (max-width: 1026px) {
+      .sidenav {
+        display: none;
+      }
+
+      .container {
+        width: 100%;
+        margin-left: 0%;
+      }
+    }
+
+    #toctitle h2 {
+      background-color: #F1EFEF;
+      padding: 9px 13px;
+      box-sizing: border-box;
+      border-bottom: 2px solid #1D8387;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+
+
+    .footer {
+      position: fixed;
+      left: 0px;
+      bottom: 0px;
+      width: 100%;
+      background-color: blue;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!--===== HEADER =====-->
+  <header class="header">
+    <p class="header-logo">logo</p>
+  </header>
+  <!--===== NAVBAR =====-->
+
+  <div class="topnav">
+    <a href="#"> Home</a>
+    <a href="#">productes </a>
+    <a href="#">about us</a>
+  </div>
+  <div class="sidenav">
+    <a href="#">sid1</a>
+    <a href="#">sid2</a>
+  </div>
+
+  <!--===== MAIN =====-->
+
+  <main class="container">
+
+
+    <section class="part3" id="part3">
+      <span id="part2" style="font-size: 20px;">
+
+        <form action="#" method="post">
+          <div class="contact__container bd-grid">
+            <div class="contact__info" style="direction: ltr; ">
+              <br>
+              <div class="row">
+                <div class="column left" >
+                  <span>
+                    <label for="name" >Name</label>
+                    <input type="text" id="name" name="name" onfocus="nameReq()">
+                  </span>
+                </div>
+                <div class="column right" >
+                  <span>
+                    <label for="price" >Price</label>
+                    <input type="text" id="Price" name="price" onfocus="priceReq()">
+  
+                  </span>
+                </div>
+              </div>
+    <!--===== add producte =====-->
+
+              <div class="row">
+                <div class="column full">
+                  <span>
+                    <label for="Discription">Discription</label>
+                    <input type="text" id="Discription" name="Discription" class="resizedTextbox">
+                  </span>
+                </div>
+                
+              </div>
+
+              <div class="row">
+                <div class="column left" >
+                  <span>
+                    <div class="add-product-3" ></div>
+                    <br>
+                    <input style="border-radius:20% ; " type="submit" value="add">
+                    <br> 
+                    <br>
+                    <br>
+                  </span>
+                </div>
+                <div class="column right" >
+                  <span>
+                    <div class="add-product-3">
+                      <P class="alert" style="color: red;" id="nameValidate"></P>
+                      <P class="alert" id="priceValidate" style="color: red;"></P>
+                  </div>
+                  </span>
+                </div>
+
+
+
+              </div>
+
+                <!--===== show productes =====-->
+                <div class="container-grid">
+                  <div class="cell cell-1">1.</div>
+                  <div class="cell cell-2">2.</div>
+                  <div class="cell cell-3">3.</div>
+                  <div class="cell cell-4">4.</div>
+                  <div class="cell cell-5">5.</div>
+                  <div class="cell cell-6">6.</div>
+                  <div class="cell cell-7">7.</div>
+                  <div class="cell cell-8">8.</div>
+                  <div class="cell cell-9">9.</div>
+              </div>
+
+
+              <br>
+              <br>
+
+
+              <br>
+              <br>
+
+
+
+        </form>
+      </span>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </main>
+
+
+  <!--===== FOOTER =====-->
+
+  <footer class="footer">
+    <p>مع تمنياتي لكم بالتوفيق </p>
+
+  </footer>
+  <script>
+      function nameReq(){
+        nameValidate.innerHTML = "Enter name is requier";
+      }
+      function priceReq(){
+        priceValidate.innerHTML = "Enter price is requier";
+      }
+  </script>
+</body>
