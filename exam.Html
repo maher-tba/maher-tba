@@ -1,314 +1,241 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta property="og:title" content="معلومات عن القطط ">
-  <meta property="og:site_name" content="Homework 1">
-  <meta name="viewport">
-  <title>Assignment 2</title>
-  <link rel="icon" type="image/x-icon" href="img/cat.ico">
-  <!-- ===== CSS ===== -->
-  <style>
-    .header {
-      background-color: rgb(255, 255, 255);
-      position: fixed;
-      width: 100%;
-      top: 0px;
-      left: 0px;
-      height: 100px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .header-main {
-      padding: 5px;
-      text-align: center;
-      height: 10%;
-      border: 2px solid black;
-    }
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-    .header-logo {
-      border-radius: 50%;
-      width: 80px;
-      text-align: center;
-      padding: 8px;
-      border: 2px solid black;
-    }
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-    .topnav {
-      background-color: rgb(255, 255, 255);
-      border: 2px solid black;
-
-      position: fixed;
-      margin-top: 100px;
-      width: 100%;
-      top: 0px;
-      left: 0px;
-    }
-
-    .topnav a {
-      float: right;
-      color: #000;
-      text-align: center;
-      padding: 14px 16px;
-      font-size: 17px;
-      float: left;
-      border: 2px solid black;
-      
-            
-    }
-
-    .topnav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    .sidenav {
-      border: 2px solid black;
-      height: 100%;
-      width: 20%;
-      top: 0px;
-      left: 0px;
-      position: fixed;
-      background-color: rgb(255, 255, 255);
-      overflow-x: hidden;
-      margin-top: 155px;
-    }
-
-    .sidenav a {
-      padding: 6px 8px 6px 16px;
-      text-decoration: none;
-      font-size: 25px;
-      display: flex;
-    }
-
-    .sidenav a:hover {
-      color: #f1f1f1;
-    }
-
-    h1 {
-      color: maroon;
-      margin-left: 40px;
-    }
-
-
-    .container {
-      background-color: fff;
-      margin-left: 20%;
-      width: 80%;
-      position: absolute;
-      margin-top: 150px;
-      z-index: -1;
-      top: 0px;
-      left: 0px;
-    }
-    .column {
-      float: left;
-      padding: 10px;
-    }
-
-    .left {
-      width: 40%;
-    }
-
-    .right {
-      width: 40%;
-    }
-
-    .full {
-      width: 82%;
-    }
-
-    .container-grid{
-      flex: 1;
-    padding: 20px;
-    flex-flow: row;
-    gap: 10px;
-
-
-    }
-    .cell {
-    font-size: 2rem;
-    width: 20%;
-    text-align: center;
-    padding: 4rem;
-    background: deepskyblue;
-    float: left;
-    margin: 2%;
-
-}
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    .resizedTextbox {width: 300px; }
-
-
-    @media only screen and (max-width: 1026px) {
-      .sidenav {
-        display: none;
-      }
-
-      .container {
-        width: 100%;
-        margin-left: 0%;
-      }
-    }
-
-    #toctitle h2 {
-      background-color: #F1EFEF;
-      padding: 9px 13px;
-      box-sizing: border-box;
-      border-bottom: 2px solid #1D8387;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-
-
-    .footer {
-      position: fixed;
-      left: 0px;
-      bottom: 0px;
-      width: 100%;
-      background-color: blue;
-      color: white;
-      text-align: center;
-    }
-  </style>
+    <title>Portfolio responsive complete</title>
 </head>
-
 <body>
-  <!--===== HEADER =====-->
-  <header class="header">
-    <p class="header-logo">logo</p>
-  </header>
-  <!--===== NAVBAR =====-->
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Maher Tabbaa</a>
+            </div>
 
-  <div class="topnav">
-    <a href="#"> Home</a>
-    <a href="#">productes </a>
-    <a href="#">about us</a>
-  </div>
-  <div class="sidenav">
-    <a href="#">sid1</a>
-    <a href="#">sid2</a>
-  </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
 
-  <!--===== MAIN =====-->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
 
-  <main class="container">
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home" id="home">
+            <div class="home__container bd-grid">
+                <h1 class="home__title"><span>HE</span><br>LLO.</h1>
 
-
-    <section class="part3" id="part3">
-      <span id="part2" style="font-size: 20px;">
-
-        <form action="#" method="post">
-          <div class="contact__container bd-grid">
-            <div class="contact__info" style="direction: ltr; ">
-              <br>
-              <div class="row">
-                <div class="column left" >
-                  <span>
-                    <label for="name" >Name</label>
-                    <input type="text" id="name" name="name" onfocus="nameReq()">
-                  </span>
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
                 </div>
-                <div class="column right" >
-                  <span>
-                    <label for="price" >Price</label>
-                    <input type="text" id="Price" name="price" onfocus="priceReq()">
-  
-                  </span>
-                </div>
-              </div>
-    <!--===== add producte =====-->
 
-              <div class="row">
-                <div class="column full">
-                  <span>
-                    <label for="Discription">Discription</label>
-                    <input type="text" id="Discription" name="Discription" class="resizedTextbox">
-                  </span>
+                <img src="assets/img/me4.png" alt="" class="home__img">
+            </div>
+        </section>
+        
+        <!--===== ABOUT =====-->
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/me4.png" alt="">
+                </div>
+
+                <div>
+                    <h2 class="about__subtitle">I'am Maher Tabbaa</h2>
+                    <span class="about__profession">Informatics Engineering</span>
+                    <p class="about__text">Data science, data engineering, and designing the best 
+                        reports is one of the best fields I'm good at. I am a person who 
+                        takes my work serious and always strive to be as good as 
+                        possible</p>
+
+                    <div class="about__social">
+                        <a href="https://www.linkedin.com/in/ماهر-طباع-a5a129216" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="https://github.com/maher-tba" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                        <a href="#" class="about__social-icon"><i class='bx bxl-dribbble' ></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills__container bd-grid">
+                <div class="skills__box">
+                    <h3 class="skills__subtitle">Development</h3>
+                    <span class="skills__name">Html</span>
+                    <span class="skills__name">Css</span>
+                    <span class="skills__name">Javascript</span>
+                    <span class="skills__name">Laraval</span>
+                    <span class="skills__name">Vue</span>
+                    
+                    <h3 class="skills__subtitle">Microsoft</h3>
+                    <span class="skills__name">Word</span>
+                    <span class="skills__name">Excel</span>
+                    <span class="skills__name">Power Point</span>
+                    <span class="skills__name">Outlook</span>
+
+                    <h3 class="skills__subtitle">Tools</h3>
+                    <span class="skills__name">Power BI</span>
+                    <span class="skills__name">Kobo</span>
+                    <span class="skills__name">github</span>
+                    <span class="skills__name">VS code</span>
+                    <span class="skills__name">Slack</span>
+
+                </div>
+
+                <div class="skills__img">
+                    <img src="assets/img/skills1.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!--===== SKILLS 2 =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Extra Skills</h2>
+
+            <div class="skills__container bd-grid">
+                <div class="skills__box">
+                    <h3 class="skills__subtitle">Mapping</h3>
+                    <span class="skills__name">google</span>
+                    <span class="skills__name">Sas Planet</span>
+                    
+                    <h3 class="skills__subtitle">Programming</h3>
+                    <span class="skills__name">Python</span>
+                    <span class="skills__name">php</span>
+                    <span class="skills__name">C#</span>
+                    <span class="skills__name">Javascript</span>
+
+
+                    
+                    <h3 class="skills__subtitle">Design</h3>
+                    <span class="skills__name">After Effects </span>
+                    <span class="skills__name">Illustrator</span>
+                </div>
+
+                <div class="skills__img">
+                    <img src="assets/img/skills2.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+
+        <!--===== PORTFOLIO =====-->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section-title">Portfolio</h2>
+
+            <div class="portfolio__container bd-grid">
+                <div class="portfolio__img prot-h">
+                    <img src="assets/img/IOM FSL 72.jpg" alt="">
+
+                    <div class="portfolio__link">
+                        <a href="#" class="portfolio__link-name">Final Report</a>
+                    </div>
+                </div>
+                <div class="portfolio__img">
+                    <img src="assets/img/Reg BENs in FSL 72-1.jpg" alt="">
+
+                    <div class="portfolio__link">
+                        <a href="#" class="portfolio__link-name">Monthly Report</a>
+                    </div>
+                </div>
+                <div class="portfolio__img">
+                    <img src="assets/img/weekly FSL 72 report.jpg" alt="">
+
+                    <div class="portfolio__link">
+                        <a href="#" class="portfolio__link-name">Weekly Report</a>
+                    </div>
                 </div>
                 
-              </div>
+            </div>
+        </section>
 
-              <div class="row">
-                <div class="column left" >
-                  <span>
-                    <div class="add-product-3" ></div>
-                    <br>
-                    <input style="border-radius:20% ; " type="submit" value="add">
-                    <br> 
-                    <br>
-                    <br>
-                  </span>
-                </div>
-                <div class="column right" >
-                  <span>
-                    <div class="add-product-3">
-                      <P class="alert" style="color: red;" id="nameValidate"></P>
-                      <P class="alert" id="priceValidate" style="color: red;"></P>
-                  </div>
-                  </span>
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact__container bd-grid">
+                <div class="contact__info">
+                    <h3 class="contact__subtitle">EMAIL</h3>
+                    <span class="contact__text">mahertabbaa@outlook.com</span>
+
+                    <h3 class="contact__subtitle">PHONE</h3>
+                    <span class="contact__text">+905013270514</span>
+
+                    <h3 class="contact__subtitle">ADDRESS</h3>
+                    <span class="contact__text">Syria, Aleppo, Al Bab</span>
                 </div>
 
+                <form action="" class="contact__form">
+                    <div class="contact__inputs">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                    </div>
+                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+
+                    <input type="submit" value="Send" class="contact__button">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__data">
+                <h2 class="footer__title">Maher Tabbaa</h2>
+                <p class="footer__text">I'm Maher Tabbaa and this is my personal website</p>
+            </div>
+
+            <div class="footer__data">
+                <h2 class="footer__title">EXPLORE</h2>
+                <ul>
+                    <li><a href="#home" class="footer__link">Home</a></li>
+                    <li><a href="#about" class="footer__link">About</a></li>
+                    <li><a href="#skills" class="footer__link">Skills</a></li>
+                    <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                    <li><a href="#Contact" class="footer__link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__data">
+                <h2 class="footer__title">FOLLOW</h2>
+                <a href="https://www.facebook.com/MaherTabbaa1/" class="footer__social"><i class='bx bxl-facebook' ></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://twitter.com/SFi3DXMg1JTxSeC" class="footer__social"><i class='bx bxl-twitter' ></i></a>
+            </div>
 
 
-              </div>
+        </div>
+    </footer>
 
-                <!--===== show productes =====-->
-                <div class="container-grid">
-                  <div class="cell cell-1">1.</div>
-                  <div class="cell cell-2">2.</div>
-                  <div class="cell cell-3">3.</div>
-                  <div class="cell cell-4">4.</div>
-                  <div class="cell cell-5">5.</div>
-                  <div class="cell cell-6">6.</div>
-                  <div class="cell cell-7">7.</div>
-                  <div class="cell cell-8">8.</div>
-                  <div class="cell cell-9">9.</div>
-              </div>
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-
-              <br>
-              <br>
-
-
-              <br>
-              <br>
-
-
-
-        </form>
-      </span>
-    </section>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  </main>
-
-
-  <!--===== FOOTER =====-->
-
-  <footer class="footer">
-    <p>مع تمنياتي لكم بالتوفيق </p>
-
-  </footer>
-  <script>
-      function nameReq(){
-        nameValidate.innerHTML = "Enter name is requier";
-      }
-      function priceReq(){
-        priceValidate.innerHTML = "Enter price is requier";
-      }
-  </script>
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
 </body>
+</html>
